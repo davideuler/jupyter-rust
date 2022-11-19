@@ -2,7 +2,9 @@ version: "3.9"
 services:
   web:
     build: .
+    #image: davideuler/jupyter-rust:1.0
+    platform: linux/x86_64
     ports:
-      - "8888:8888"
+      - "8899:8899"
     volumes:
       - ./notebooks:/opt/notebooks

@@ -18,26 +18,32 @@ kernel > Change Kernel > (Rust|python3)
 
 ![](.jupyter-rust_helloWorld.gif)
 
+# Build image by dockerfile only
+
+docker build --platform linux/amd64 -t rust-jupyter .
+
 # Image Details
 
 Image components' versions:
-* base docker image -> rust:1.49
+* base docker image -> rust:1.65.0
 * conda version -> 4.9.2 
-* jupyter version -> 4.7.0
+* jupyter version -> 5.0.0
 * evcxr_jupyter = "0.8.0"
 
 ## Jupyter Version Details
 ```
 # jupyter --version
-jupyter core     : 4.7.0
-jupyter-notebook : 6.2.0
-qtconsole        : not installed
-ipython          : 7.12.0
-ipykernel        : 5.4.3
-jupyter client   : 6.1.11
-jupyter lab      : 2.2.9
-nbconvert        : 6.0.7
+IPython          : 8.6.0
+ipykernel        : 5.5.5
 ipywidgets       : not installed
-nbformat         : 5.1.2
-traitlets        : 5.0.5
+jupyter_client   : 7.0.6
+jupyter_core     : 5.0.0
+jupyter_server   : 1.23.2
+jupyterlab       : 3.5.0
+nbclient         : 0.7.0
+nbconvert        : 7.2.5
+nbformat         : 5.7.0
+notebook         : 6.5.2
+qtconsole        : not installed
+traitlets        : 5.5.0
 ```
