@@ -1,9 +1,9 @@
-version: "3.9"
+version: "3.3"
 services:
   web:
     build: .
     #image: davideuler/jupyter-rust:1.0
-    platform: linux/x86_64
+    #platform: linux/x86_64  ## for mac m1 only
     ports:
       - "8899:8899"
     volumes:
