@@ -7,11 +7,14 @@ This can be built on your local machine or you can [follow the instructions here
 
 # Run already built images
 
+```
 docker run --name jupyter-rust -d -p 8899:8899 -v `pwd`:/opt/notebooks --platform=linux/amd64 davideuler/jupyter-rust:1.0
 
 docker logs jupyter-rust
+```
 
 Then you can access the URL for jupyter with rust support as prompted by the running log of the application:
+
 http://localhost:8899/lab?token=xxxxxxxx
 
 # To Build
@@ -29,7 +32,7 @@ kernel > Change Kernel > (Rust|python3)
 
 # Build image by dockerfile only
 
-docker build --platform linux/amd64 -t rust-jupyter .
+docker build --platform linux/amd64 -t jupyter-rust:1.0 .
 
 
 # Image Details
